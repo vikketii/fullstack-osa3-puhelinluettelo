@@ -2,6 +2,6 @@ POST http://glacial-everglades-19924.herokuapp.com/api/persons
 Content-Type: application/json
 
 {
-    "name": "Testi Testaaja",
+    "name": "asdf",
     "number": "044-45671231111111111"
 }
