@@ -20,17 +20,17 @@ const personSchema = new mongoose.Schema({
 const Person = mongoose.model('Person', personSchema)
 
 if ( process.argv.length === 5) {
-  nameToAdd = process.argv[3]
-  numberToAdd = process.argv[4]
+  const nameToAdd = process.argv[3]
+  const numberToAdd = process.argv[4]
 
   const person = new Person({
     name: nameToAdd,
     number: numberToAdd,
   })
-  
+
   person.save().then(response => {
-    console.log(`lisätään ${nameToAdd} numero ${numberToAdd} luetteloon`);
-    mongoose.connection.close();
+    console.log(`lisätään ${nameToAdd} numero ${numberToAdd} luetteloon`)
+    mongoose.connection.close()
   })
 
 } else {
